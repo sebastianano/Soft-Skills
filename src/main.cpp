@@ -9,7 +9,7 @@
 #define LED_RED_PIN D2
 #define LED_GREEN_PIN D3
 
-#define AP_SSID "SM_AP"
+#define AP_SSID "Smart Mailbox Setup"
 #define AP_SECRET "abcDEF123!"
 
 #define MQTT_SERVER_IP "192.168."
