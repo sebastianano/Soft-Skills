@@ -1,0 +1,10 @@
+.pio
+CMakeListsPrivate.txt
+cmake-build-*/ 
+
+.idea
+mqtt/data
+mqtt/mosquitto.log
+nodered/data/.npm
+nodered/data/lib
+nodered/data/node_modules

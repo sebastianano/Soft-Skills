@@ -3,12 +3,16 @@ services:
     image: eclipse-mosquitto
     container_name: "mqtt"
     volumes:
-      - "./mosquitto.conf:/mosquitto/config/mosquitto.conf"
+      - "./mqtt/mosquitto.conf:/mosquitto/config/mosquitto.conf"
+      - "./mqtt/data/:/mosquitto/data/"
+      - "./mqtt/mosquitto.log:/mosquitto/log/mosquitto.log"
     ports:
       - "1883:1883"
       - "9001:9001"
   nodered:
     image: nodered/node-red
     container_name: "nodered"
+    volumes:
+      - "./nodered/data/:/data/"
     ports:
       - "1880:1880"

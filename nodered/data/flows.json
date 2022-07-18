@@ -1,0 +1,808 @@
+[
+    {
+        "id": "471e0c0b6685e15c",
+        "type": "tab",
+        "label": "Flow 1",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "308d5412e9bfc2cc",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-light",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#0094CE",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#097479",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": false
+            },
+            "customTheme": {
+                "name": "Untitled Theme 1",
+                "default": "#4B7930",
+                "baseColor": "#4B7930",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#0094CE",
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-backgroundColor": {
+                    "value": "#fafafa",
+                    "edited": false
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#1bbfff",
+                    "edited": false
+                },
+                "group-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "widget-textColor": {
+                    "value": "#111111",
+                    "edited": false
+                },
+                "widget-backgroundColor": {
+                    "value": "#0094ce",
+                    "edited": false
+                },
+                "widget-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "base-font": {
+                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+                }
+            },
+            "angularTheme": {
+                "primary": "indigo",
+                "accents": "blue",
+                "warn": "red",
+                "background": "grey",
+                "palette": "light"
+            }
+        },
+        "site": {
+            "name": "Smart Mailbox",
+            "hideToolbar": "true",
+            "allowSwipe": "false",
+            "lockMenu": "false",
+            "allowTempTheme": "true",
+            "dateFormat": "DD/MM/YYYY",
+            "sizes": {
+                "sx": 48,
+                "sy": 48,
+                "gx": 6,
+                "gy": 6,
+                "cx": 6,
+                "cy": 6,
+                "px": 0,
+                "py": 0
+            }
+        }
+    },
+    {
+        "id": "b90a8690cd6c09a7",
+        "type": "ui_group",
+        "name": "Main",
+        "tab": "6cdee084a7196083",
+        "order": 1,
+        "disp": false,
+        "width": "9",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "c723c96f97d4d4d7",
+        "type": "mqtt-broker",
+        "name": "",
+        "broker": "mqtt",
+        "port": "1883",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": "",
+        "willMsg": {},
+        "sessionExpiry": ""
+    },
+    {
+        "id": "5b23a141f6ccdfa6",
+        "type": "ui_group",
+        "name": "Main",
+        "tab": "fc655faf84997b41",
+        "order": 1,
+        "disp": false,
+        "width": "9",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "6cdee084a7196083",
+        "type": "ui_tab",
+        "name": "Info",
+        "icon": "dashboard",
+        "order": 1,
+        "disabled": false,
+        "hidden": true
+    },
+    {
+        "id": "fc655faf84997b41",
+        "type": "ui_tab",
+        "name": "Home",
+        "icon": "dashboard",
+        "order": 2,
+        "disabled": false,
+        "hidden": true
+    },
+    {
+        "id": "d1c508408f352a9c",
+        "type": "ui_led",
+        "z": "471e0c0b6685e15c",
+        "order": 2,
+        "group": "b90a8690cd6c09a7",
+        "width": 9,
+        "height": 2,
+        "label": "Es wird versucht ein Verbindung zum Gerät herzustellen...",
+        "labelPlacement": "left",
+        "labelAlignment": "left",
+        "colorForValue": [
+            {
+                "color": "#ff0000",
+                "value": "false",
+                "valueType": "bool"
+            },
+            {
+                "color": "#008000",
+                "value": "true",
+                "valueType": "bool"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "shape": "circle",
+        "showGlow": false,
+        "name": "LED Status",
+        "x": 490,
+        "y": 500,
+        "wires": []
+    },
+    {
+        "id": "ec58d0b2fc1a06ce",
+        "type": "ui_text",
+        "z": "471e0c0b6685e15c",
+        "group": "b90a8690cd6c09a7",
+        "order": 3,
+        "width": 9,
+        "height": 1,
+        "name": "Text Info",
+        "label": "Sobald das Gerät bereit ist, wirst Du weitergeleitet",
+        "format": "{{msg.payload}}",
+        "layout": "row-left",
+        "className": "",
+        "x": 240,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "caa4ff180601d287",
+        "type": "inject",
+        "z": "471e0c0b6685e15c",
+        "name": "LED Initialisierung",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "false",
+        "payloadType": "bool",
+        "x": 290,
+        "y": 500,
+        "wires": [
+            [
+                "d1c508408f352a9c"
+            ]
+        ]
+    },
+    {
+        "id": "ac93c2fcfa1ebd92",
+        "type": "mqtt in",
+        "z": "471e0c0b6685e15c",
+        "name": "",
+        "topic": "sm/heartbeat",
+        "qos": "2",
+        "datatype": "auto",
+        "broker": "c723c96f97d4d4d7",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 250,
+        "y": 640,
+        "wires": [
+            [
+                "d7b63afd999b14d7",
+                "173285dc3c45e3a3",
+                "771997943b393c5c"
+            ]
+        ]
+    },
+    {
+        "id": "d7b63afd999b14d7",
+        "type": "debug",
+        "z": "471e0c0b6685e15c",
+        "name": "Debug sm/heartbeat",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 460,
+        "y": 740,
+        "wires": []
+    },
+    {
+        "id": "7c960d39de3976e3",
+        "type": "ui_led",
+        "z": "471e0c0b6685e15c",
+        "order": 4,
+        "group": "5b23a141f6ccdfa6",
+        "width": 9,
+        "height": 2,
+        "label": "Verbunden",
+        "labelPlacement": "left",
+        "labelAlignment": "right",
+        "colorForValue": [
+            {
+                "color": "#008000",
+                "value": "true",
+                "valueType": "bool"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "shape": "circle",
+        "showGlow": false,
+        "name": "LED Status",
+        "x": 490,
+        "y": 1180,
+        "wires": []
+    },
+    {
+        "id": "5cd208dea729e0f1",
+        "type": "inject",
+        "z": "471e0c0b6685e15c",
+        "name": "LED Initialisierung",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "true",
+        "payloadType": "bool",
+        "x": 290,
+        "y": 1180,
+        "wires": [
+            [
+                "7c960d39de3976e3"
+            ]
+        ]
+    },
+    {
+        "id": "c4a17475e34f5fbb",
+        "type": "ui_ui_control",
+        "z": "471e0c0b6685e15c",
+        "name": "",
+        "events": "change",
+        "x": 460,
+        "y": 940,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "73f8527357719a8e",
+        "type": "inject",
+        "z": "471e0c0b6685e15c",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "{\"tab\":\"Home\"}",
+        "payloadType": "json",
+        "x": 280,
+        "y": 940,
+        "wires": [
+            [
+                "c4a17475e34f5fbb"
+            ]
+        ]
+    },
+    {
+        "id": "1ec0c27524dce28a",
+        "type": "mqtt in",
+        "z": "471e0c0b6685e15c",
+        "name": "",
+        "topic": "sm/mail-arrived",
+        "qos": "2",
+        "datatype": "auto",
+        "broker": "c723c96f97d4d4d7",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 260,
+        "y": 1580,
+        "wires": [
+            [
+                "950c30b37c1239b3",
+                "b4a17152be27256d",
+                "04b7c2e5989bd15d"
+            ]
+        ]
+    },
+    {
+        "id": "b4a17152be27256d",
+        "type": "function",
+        "z": "471e0c0b6685e15c",
+        "name": "",
+        "func": "msg.payload = true;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 420,
+        "y": 1660,
+        "wires": [
+            [
+                "1dbbb552eb71e481"
+            ]
+        ]
+    },
+    {
+        "id": "881d240378c51ec5",
+        "type": "ui_template",
+        "z": "471e0c0b6685e15c",
+        "group": "5b23a141f6ccdfa6",
+        "name": "Heading",
+        "order": 1,
+        "width": 5,
+        "height": 1,
+        "format": "<h1>Smart Mailbox</h1>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 240,
+        "y": 1100,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "e17a7c8cd49d568d",
+        "type": "comment",
+        "z": "471e0c0b6685e15c",
+        "name": "Home Layout",
+        "info": "",
+        "x": 230,
+        "y": 1020,
+        "wires": []
+    },
+    {
+        "id": "f4f1d621a96e55b0",
+        "type": "comment",
+        "z": "471e0c0b6685e15c",
+        "name": "Home Funktionen",
+        "info": "",
+        "x": 250,
+        "y": 1260,
+        "wires": []
+    },
+    {
+        "id": "385ac4a847e0c070",
+        "type": "comment",
+        "z": "471e0c0b6685e15c",
+        "name": "Home Initializer",
+        "info": "",
+        "x": 240,
+        "y": 860,
+        "wires": []
+    },
+    {
+        "id": "692f98e57ffb915e",
+        "type": "mqtt out",
+        "z": "471e0c0b6685e15c",
+        "name": "",
+        "topic": "sm/calibrate",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "c723c96f97d4d4d7",
+        "x": 470,
+        "y": 1420,
+        "wires": []
+    },
+    {
+        "id": "be416b760ae2e356",
+        "type": "debug",
+        "z": "471e0c0b6685e15c",
+        "name": "Debug sm/calibrate",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 490,
+        "y": 1340,
+        "wires": []
+    },
+    {
+        "id": "04b7c2e5989bd15d",
+        "type": "debug",
+        "z": "471e0c0b6685e15c",
+        "name": "Debug sm/mailbox",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 450,
+        "y": 1500,
+        "wires": []
+    },
+    {
+        "id": "00756ad77f8fa1c7",
+        "type": "comment",
+        "z": "471e0c0b6685e15c",
+        "name": "Info Funktionen",
+        "info": "",
+        "x": 240,
+        "y": 420,
+        "wires": []
+    },
+    {
+        "id": "e5885b889b2bffc6",
+        "type": "comment",
+        "z": "471e0c0b6685e15c",
+        "name": "Info Layout",
+        "info": "",
+        "x": 220,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "b6dac89fb21376e8",
+        "type": "ui_template",
+        "z": "471e0c0b6685e15c",
+        "group": "b90a8690cd6c09a7",
+        "name": "Heading",
+        "order": 1,
+        "width": 9,
+        "height": 1,
+        "format": "<h1>Smart Mailbox</h1>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 240,
+        "y": 260,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "173285dc3c45e3a3",
+        "type": "function",
+        "z": "471e0c0b6685e15c",
+        "name": "",
+        "func": "msg.payload = {\"tab\": \"Home\"}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 420,
+        "y": 580,
+        "wires": [
+            [
+                "ef97a11b84e98227"
+            ]
+        ]
+    },
+    {
+        "id": "ef97a11b84e98227",
+        "type": "ui_ui_control",
+        "z": "471e0c0b6685e15c",
+        "name": "",
+        "events": "change",
+        "x": 600,
+        "y": 620,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "771997943b393c5c",
+        "type": "trigger",
+        "z": "471e0c0b6685e15c",
+        "name": "",
+        "op1": "",
+        "op2": "{\"tab\":\"Info\"}",
+        "op1type": "nul",
+        "op2type": "json",
+        "duration": "4.5",
+        "extend": true,
+        "overrideDelay": false,
+        "units": "s",
+        "reset": "",
+        "bytopic": "all",
+        "topic": "topic",
+        "outputs": 1,
+        "x": 430,
+        "y": 660,
+        "wires": [
+            [
+                "ef97a11b84e98227"
+            ]
+        ]
+    },
+    {
+        "id": "5a5f1511d132309c",
+        "type": "ui_toast",
+        "z": "471e0c0b6685e15c",
+        "position": "top right",
+        "displayTime": "3",
+        "highlight": "",
+        "sendall": true,
+        "outputs": 0,
+        "ok": "OK",
+        "cancel": "",
+        "raw": false,
+        "className": "",
+        "topic": "Smart Mailbox",
+        "name": "",
+        "x": 610,
+        "y": 1740,
+        "wires": []
+    },
+    {
+        "id": "950c30b37c1239b3",
+        "type": "function",
+        "z": "471e0c0b6685e15c",
+        "name": "",
+        "func": "msg.payload = \"Post ist eingegangen\";\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 420,
+        "y": 1740,
+        "wires": [
+            [
+                "5a5f1511d132309c"
+            ]
+        ]
+    },
+    {
+        "id": "1dbbb552eb71e481",
+        "type": "ui_template",
+        "z": "471e0c0b6685e15c",
+        "group": "5b23a141f6ccdfa6",
+        "name": "Mail Arrived Switch",
+        "order": 5,
+        "width": 9,
+        "height": 2,
+        "format": "<style>\n    .nr-dashboard-template-overwrite { overflow-y: unset; padding: 0; }\n    .nr-dashboard-button-overwrite { padding: 0!important; }\n</style>\n<script>\n    (function(scope) {\n        scope.messageArrived = false;\n        scope.$watch('msg', function(msg) {\n            if (msg) {\n                scope.messageArrived = msg.payload;\n            }\n        });\n        scope.dismiss = function() {\n            scope.messageArrived = false;\n        }\n    })(scope);\n</script>\n<div class=\"nr-dashboard-text _md layout-align-start-center layout-row\" style=\"height: 48px;\" ng-if=\"!messageArrived\">\n    <p class=\"label\">Keine Post bisher eingegangen</p>\n</div>\n<div class=\"nr-dashboard-text _md layout-align-start-center layout-row\" style=\"height: 48px; margin-bottom: 6px;\" ng-if=\"messageArrived\">\n    <p class=\"label\">Post ist eingegangen</p>\n</div>\n<div class=\"nr-dashboard-button nr-dashboard-button-overwrite _md visible\" style=\"height: 48px;\" ng-if=\"messageArrived\">\n    <button class=\"md-raised md-button md-ink-ripple\" style=\"background-color: black; z-index: 1; padding: 0px;\" ng-click=\"dismiss()\">\n        <span>OK</span>\n    </button>\n</div>\n",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": false,
+        "templateScope": "local",
+        "className": "nr-dashboard-template-overwrite",
+        "x": 610,
+        "y": 1660,
+        "wires": [
+            [
+                "a181278778d16bcd"
+            ]
+        ]
+    },
+    {
+        "id": "c5103c03a8aee86f",
+        "type": "ui_button",
+        "z": "471e0c0b6685e15c",
+        "name": "Button Kalibrieren",
+        "group": "5b23a141f6ccdfa6",
+        "order": 3,
+        "width": 9,
+        "height": 1,
+        "passthru": false,
+        "label": "Kalibrieren",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "gray",
+        "className": "",
+        "icon": "",
+        "payload": "{\"msg\":\"Set calibration value\"}",
+        "payloadType": "json",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 270,
+        "y": 1420,
+        "wires": [
+            [
+                "692f98e57ffb915e",
+                "be416b760ae2e356"
+            ]
+        ]
+    },
+    {
+        "id": "a181278778d16bcd",
+        "type": "debug",
+        "z": "471e0c0b6685e15c",
+        "name": "Debug Mail Arrived Switch",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 860,
+        "y": 1660,
+        "wires": []
+    },
+    {
+        "id": "f0f300e212e93893",
+        "type": "ui_template",
+        "z": "471e0c0b6685e15c",
+        "group": "5b23a141f6ccdfa6",
+        "name": "Battery Status",
+        "order": 2,
+        "width": 4,
+        "height": 1,
+        "format": "<style>\n    .nr-dashboard-template-overwrite { overflow-y: unset; padding: 0; }\n</style>\n<script>\n    (function(scope) {\n        scope.batteryStatus = 0;\n        scope.$watch('msg', function(msg) {\n            if (msg) {\n                scope.batteryStatus = msg.payload.batteryStatus;\n            }\n        });\n    })(scope);\n</script>\n<div class=\"nr-dashboard-text _md layout-align-start-center layout-row\" style=\"height: 48px;\">\n    <p class=\"label\">Batterie Status: {{batteryStatus}} %</p>\n</div>\n",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": false,
+        "templateScope": "local",
+        "className": "nr-dashboard-template-overwrite",
+        "x": 620,
+        "y": 1820,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "4b077e6832b7a62e",
+        "type": "mqtt in",
+        "z": "471e0c0b6685e15c",
+        "name": "",
+        "topic": "sm/battery-status",
+        "qos": "2",
+        "datatype": "auto",
+        "broker": "c723c96f97d4d4d7",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 270,
+        "y": 1820,
+        "wires": [
+            [
+                "e850f6c3f1bd4f8e",
+                "ba2eb96168e970bb"
+            ]
+        ]
+    },
+    {
+        "id": "e850f6c3f1bd4f8e",
+        "type": "debug",
+        "z": "471e0c0b6685e15c",
+        "name": "Debug sm/battery-status",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 510,
+        "y": 1880,
+        "wires": []
+    },
+    {
+        "id": "ba2eb96168e970bb",
+        "type": "json",
+        "z": "471e0c0b6685e15c",
+        "name": "",
+        "property": "payload",
+        "action": "",
+        "pretty": true,
+        "x": 450,
+        "y": 1820,
+        "wires": [
+            [
+                "f0f300e212e93893"
+            ]
+        ]
+    },
+    {
+        "id": "035a23badbd1f54a",
+        "type": "comment",
+        "z": "471e0c0b6685e15c",
+        "name": "Smart Mailbox Flow",
+        "info": "",
+        "x": 250,
+        "y": 100,
+        "wires": []
+    }
+]
