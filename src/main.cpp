@@ -4,7 +4,7 @@
 #include <PubSubClient.h>
 #include <NewPing.h>
 
-#define FLAG_DEBUG_WIFI true
+#define FLAG_DEBUG_WIFI false
 
 #define LED_RED_PIN D2
 #define LED_GREEN_PIN D3
@@ -191,16 +191,15 @@ double determineBatteryVoltage() {
 
         CURRENT_DISTANCE = distanceSensor.ping_cm();
 
-        Serial.println("[Smart Mailbox] Current distance: " + String(CURRENT_DISTANCE) + " cm");
-
         loadConfig();
-
-        Serial.println("[Smart Mailbox] Current calibration value: " + String(CURRENT_CALIBRATION_VALUE) + " cm");
 
         if (CURRENT_CALIBRATION_VALUE > 0
             && (CURRENT_DISTANCE < CURRENT_CALIBRATION_VALUE - MAX_DELTA_TO_DISTANCE
                 || CURRENT_DISTANCE > CURRENT_CALIBRATION_VALUE - MAX_DELTA_TO_DISTANCE)
                 ) {
+            Serial.println("[Smart Mailbox] Current distance: " + String(CURRENT_DISTANCE) + " cm");
+            Serial.println("[Smart Mailbox] Current calibration value: " + String(CURRENT_CALIBRATION_VALUE) + " cm");
+
             if (currentTime - LAST_MAIL_ARRIVED_UPDATE >= LAST_MAIL_ARRIVED_UPDATE_FREQUENCY) {
                 LAST_MAIL_ARRIVED_UPDATE = currentTime;
                 mqttClient.publish(TOPIC_MAIL_ARRIVED, R"({"msg":"Mail has arrived"})");
